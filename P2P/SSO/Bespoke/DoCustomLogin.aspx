@@ -273,7 +273,7 @@
         var strDatabaseTitle = Request.Form["databaseTitle"];
 
         // Put your user validation code in here
-        if (strUsername.ToLower() != "david" || strPassword != "secret")
+        if (strUsername.ToLower() != "sysadmin" || strPassword != "secret")
         {
             // Login has failed
             Session.Add("Exception", "Login Failed");

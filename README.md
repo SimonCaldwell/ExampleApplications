@@ -12,6 +12,9 @@ For more information see [https://proactis-documentation.github.io/](https://pro
 1. __PROACTIS.ExampleApplications.ExternalLogin__  
 Shows how to validate users against an external user store,  for example LDAP.
 
+2. Bespoke
+Demonstrates how to create completely custom login pages.
+
 ### Punchout
 
 1. Connections

@@ -30,7 +30,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bespoke", "Bespoke", "{18F5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nominal Validation", "Nominal Validation", "{DF933C4A-E54E-45A7-A7DF-A3A6A2D27E3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplications.ExampleNominalValidation", "P2P\Nominal Validation\PROACTIS.ExampleApplications.ExampleNominalCheck\PROACTIS.ExampleApplications.ExampleNominalValidation.csproj", "{AEFC7117-DCE2-4177-9B37-6995C92C47E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplications.ExampleNominalValidation", "P2P\Nominal Validation\PROACTIS.ExampleApplications.ExampleNominalValidation\PROACTIS.ExampleApplications.ExampleNominalValidation.csproj", "{AEFC7117-DCE2-4177-9B37-6995C92C47E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

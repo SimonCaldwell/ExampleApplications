@@ -12,14 +12,14 @@ For more information see [https://proactis-documentation.github.io/](https://pro
 1. __PROACTIS.ExampleApplications.ExternalLogin__  
 Shows how to validate users against an external user store,  for example LDAP.
 
-2. Bespoke
+2. __Bespoke__  
 Demonstrates how to create completely custom login pages.
 
 ### Punchout
 
-1. Connections
+1. Connections  
 Shows the standard XSLTs used to generate the xml required to connect to a supplier's punchout site
 
-2. BasketReponses
+2. Basket Responses  
 Shows the standard XSLTs used to transform the basket received from a supplier's punchout site.
 

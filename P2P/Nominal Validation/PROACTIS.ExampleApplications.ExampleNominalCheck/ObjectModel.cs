@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 
-namespace PROACTIS.ExampleApplications.ExampleNominalCheck
+namespace PROACTIS.ExampleApplications.ExampleNominalValidation
 {
     internal class ObjectModel
     {
@@ -24,29 +24,29 @@ namespace PROACTIS.ExampleApplications.ExampleNominalCheck
 
             var database = (XmlElement)dom.DocumentElement.SelectSingleNode("grs:Database", nsmgr);
             if (database == null) throw new Exception("XML does not contain an element called database.");
-            details.DatabaseServer = database.GetAttribute("grs:Server", NS);
-            details.Database = database.GetAttribute("grs:DatabaseName", NS);
+            details.DatabaseServer = database.GetAttribute("Server", NS);
+            details.Database = database.GetAttribute("DatabaseName", NS);
 
             var general = (XmlElement)dom.DocumentElement.SelectSingleNode("grs:General", nsmgr);
             if (general == null) throw new Exception("XML does not contain an element called general.");
-            details.UserGUID = general.GetAttribute("grs:UserGUID", NS);
-            details.CompanyGUID = general.GetAttribute("grs:CompanyGUID", NS);
+            details.UserGUID = general.GetAttribute("UserGUID", NS);
+            details.CompanyGUID = general.GetAttribute("CompanyGUID", NS);
 
             details.Nominals = new List<Nominal>();
-            foreach (var nom in dom.DocumentElement.SelectNodes("grs:Nominals/grs:Nominal", nsmgr))
+            foreach (XmlElement nom in dom.DocumentElement.SelectNodes("grs:Nominals/grs:Nominal", nsmgr))
             {
                 var nominal = new Nominal();
                 details.Nominals.Add(nominal);
 
-                nominal.Coding = general.GetAttribute("grs:Coding", NS);
-                nominal.Element1 = general.GetAttribute("grs:Element1", NS);
-                nominal.Element2 = general.GetAttribute("grs:Element2", NS);
-                nominal.Element3 = general.GetAttribute("grs:Element3", NS);
-                nominal.Element4 = general.GetAttribute("grs:Element4", NS);
-                nominal.Element5 = general.GetAttribute("grs:Element5", NS);
-                nominal.Element6 = general.GetAttribute("grs:Element6", NS);
-                nominal.Element7 = general.GetAttribute("grs:Element7", NS);
-                nominal.Element8 = general.GetAttribute("grs:Element8", NS);
+                nominal.Coding = nom.GetAttribute("Coding", NS);
+                nominal.Element1 = nom.GetAttribute("Element1", NS);
+                nominal.Element2 = nom.GetAttribute("Element2", NS);
+                nominal.Element3 = nom.GetAttribute("Element3", NS);
+                nominal.Element4 = nom.GetAttribute("Element4", NS);
+                nominal.Element5 = nom.GetAttribute("Element5", NS);
+                nominal.Element6 = nom.GetAttribute("Element6", NS);
+                nominal.Element7 = nom.GetAttribute("Element7", NS);
+                nominal.Element8 = nom.GetAttribute("Element8", NS);
             }
 
             return details;
@@ -65,7 +65,7 @@ namespace PROACTIS.ExampleApplications.ExampleNominalCheck
 
             foreach (var nom in details.Nominals.Where(n => !n.IsValid))
             {
-                var nominal = dom.CreateElement("grs:Nominal");
+                var nominal = dom.CreateElement("grs:Nominal", NS);
                 dom.DocumentElement.AppendChild(nominal);
 
                 nominal.SetAttribute("Coding", NS, nom.Coding);

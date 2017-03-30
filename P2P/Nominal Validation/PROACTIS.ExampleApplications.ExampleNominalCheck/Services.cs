@@ -1,4 +1,4 @@
-﻿namespace PROACTIS.ExampleApplications.ExampleNominalCheck
+﻿namespace PROACTIS.ExampleApplications.ExampleNominalValidation
 {
     public class Services : P2P.grsCustInterfaces.INominals
     {
@@ -16,10 +16,12 @@
                  *     Place your code here
                  * 
                  ******************************/
-
-                // If this nominal is not valid then...
-                allValid = false;
-                nominal.IsValid = false;
+                if (!nominal.Element1.StartsWith("A"))
+                {
+                    // If this nominal is not valid then...
+                    allValid = false;
+                    nominal.IsValid = false;
+                }
             }
 
             if (!allValid)
@@ -29,8 +31,6 @@
             }
 
             return allValid;
-
-
         }
     }
 }

@@ -5,6 +5,29 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplications.ExternalLogin", "P2P\SSO\PROACTIS.ExampleApplications.ExternalLogin\PROACTIS.ExampleApplications.ExternalLogin.csproj", "{331981D6-8534-4A16-A959-B7E2617D400F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "P2P", "P2P", "{7B722198-2B4C-4624-A038-A66FEF640047}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SSO", "SSO", "{08D5589E-38BF-429B-8479-28450B2FCBD0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Punchout", "Punchout", "{1AA3CB53-7044-4C9B-B6A5-8E8B911B4F1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Connections", "Connections", "{376D26E7-F96C-4546-9835-351FA28EBF26}"
+	ProjectSection(SolutionItems) = preProject
+		P2P\Punchout\Connections\CXMLConnect.xslt = P2P\Punchout\Connections\CXMLConnect.xslt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasketResponse", "BasketResponse", "{60B2EE46-7F5B-43A2-8475-E93F1DAE491C}"
+	ProjectSection(SolutionItems) = preProject
+		P2P\Punchout\BasketResponses\CXMLReturn.xslt = P2P\Punchout\BasketResponses\CXMLReturn.xslt
+		P2P\Punchout\BasketResponses\OCIReturn.xslt = P2P\Punchout\BasketResponses\OCIReturn.xslt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bespoke", "Bespoke", "{18F5120B-1536-4077-BB6B-777FEEB4F352}"
+	ProjectSection(SolutionItems) = preProject
+		P2P\SSO\Bespoke\CustomLogin.aspx = P2P\SSO\Bespoke\CustomLogin.aspx
+		P2P\SSO\Bespoke\DoCustomLogin.aspx = P2P\SSO\Bespoke\DoCustomLogin.aspx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +41,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{331981D6-8534-4A16-A959-B7E2617D400F} = {08D5589E-38BF-429B-8479-28450B2FCBD0}
+		{08D5589E-38BF-429B-8479-28450B2FCBD0} = {7B722198-2B4C-4624-A038-A66FEF640047}
+		{1AA3CB53-7044-4C9B-B6A5-8E8B911B4F1D} = {7B722198-2B4C-4624-A038-A66FEF640047}
+		{376D26E7-F96C-4546-9835-351FA28EBF26} = {1AA3CB53-7044-4C9B-B6A5-8E8B911B4F1D}
+		{60B2EE46-7F5B-43A2-8475-E93F1DAE491C} = {1AA3CB53-7044-4C9B-B6A5-8E8B911B4F1D}
+		{18F5120B-1536-4077-BB6B-777FEEB4F352} = {08D5589E-38BF-429B-8479-28450B2FCBD0}
 	EndGlobalSection
 EndGlobal

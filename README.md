@@ -23,3 +23,10 @@ Shows the standard XSLTs used to generate the xml required to connect to a suppl
 2. Basket Responses  
 Shows the standard XSLTs used to transform the basket received from a supplier's punchout site.
 
+
+### Nominal Validation
+Sample application showing how to implement custom nominal validation
+
+
+### Budget Checking
+Sample application showing how to implement custom budget checking

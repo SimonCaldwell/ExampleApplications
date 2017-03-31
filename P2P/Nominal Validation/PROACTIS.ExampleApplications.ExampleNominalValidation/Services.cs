@@ -1,4 +1,7 @@
-﻿namespace PROACTIS.ExampleApplications.ExampleNominalValidation
+﻿/*
+ * This file is subject to the terms and conditions defined in file 'https://github.com/proactis-documentation/ExampleApplications/LICENSE.txt'
+ */
+namespace PROACTIS.ExampleApplications.ExampleNominalValidation
 {
     public class Services : P2P.grsCustInterfaces.INominals
     {

@@ -32,6 +32,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nominal Validation", "Nomin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplications.ExampleNominalValidation", "P2P\Nominal Validation\PROACTIS.ExampleApplications.ExampleNominalValidation\PROACTIS.ExampleApplications.ExampleNominalValidation.csproj", "{AEFC7117-DCE2-4177-9B37-6995C92C47E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplications.NominalValidation.Tests", "P2P\Nominal Validation\PROACTIS.ExampleApplications.NominalValidation.Tests\PROACTIS.ExampleApplications.NominalValidation.Tests.csproj", "{A11DDE69-7E8E-4A92-8812-310FEFC69404}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplications.ExternalLogin.Tests", "P2P\SSO\PROACTIS.ExampleApplications.ExternalLogin.Tests\PROACTIS.ExampleApplications.ExternalLogin.Tests.csproj", "{D664959B-742F-4529-926F-26AEFBD5B78C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +50,14 @@ Global
 		{AEFC7117-DCE2-4177-9B37-6995C92C47E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEFC7117-DCE2-4177-9B37-6995C92C47E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEFC7117-DCE2-4177-9B37-6995C92C47E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A11DDE69-7E8E-4A92-8812-310FEFC69404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A11DDE69-7E8E-4A92-8812-310FEFC69404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A11DDE69-7E8E-4A92-8812-310FEFC69404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A11DDE69-7E8E-4A92-8812-310FEFC69404}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D664959B-742F-4529-926F-26AEFBD5B78C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D664959B-742F-4529-926F-26AEFBD5B78C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D664959B-742F-4529-926F-26AEFBD5B78C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D664959B-742F-4529-926F-26AEFBD5B78C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,5 +71,7 @@ Global
 		{18F5120B-1536-4077-BB6B-777FEEB4F352} = {08D5589E-38BF-429B-8479-28450B2FCBD0}
 		{DF933C4A-E54E-45A7-A7DF-A3A6A2D27E3A} = {7B722198-2B4C-4624-A038-A66FEF640047}
 		{AEFC7117-DCE2-4177-9B37-6995C92C47E8} = {DF933C4A-E54E-45A7-A7DF-A3A6A2D27E3A}
+		{A11DDE69-7E8E-4A92-8812-310FEFC69404} = {DF933C4A-E54E-45A7-A7DF-A3A6A2D27E3A}
+		{D664959B-742F-4529-926F-26AEFBD5B78C} = {08D5589E-38BF-429B-8479-28450B2FCBD0}
 	EndGlobalSection
 EndGlobal

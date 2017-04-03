@@ -4,6 +4,7 @@ before_build:
 build:
   project: PROACTIS.ExampleApplications.sln 
   verbosity: minimal
+image: Visual Studio 2017  
 test:
   assemblies:
     - '**\*.tests.dll'

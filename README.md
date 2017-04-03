@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/proactis-documentation/ExampleApplications.svg?branch=master)](https://travis-ci.org/proactis-documentation/ExampleApplications)
-
 [![Build status](https://ci.appveyor.com/api/projects/status/38eax8590kht2xtm?svg=true)](https://ci.appveyor.com/project/DavidBetteridge/exampleapplications)
 
 # PROACTIS Example Applications

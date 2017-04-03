@@ -42,6 +42,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplication
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplications.ExampleBudgetCheckingTests", "P2P\Budget Checking\PROACTIS.ExampleApplications.ExampleBudgetCheckingTests\PROACTIS.ExampleApplications.ExampleBudgetCheckingTests.csproj", "{80E8ACA9-A9CC-4733-99BA-CF3435523FE5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Custom Tab", "Custom Tab", "{5791A91A-2CC0-4539-99D0-D2DB6DDE68A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplications.CustomTabMVC", "P2P\Custom Tab\PROACTIS.ExampleApplications.CustomTabMVC\PROACTIS.ExampleApplications.CustomTabMVC.csproj", "{984F34E5-0E75-4AC8-855F-5FF42D5CC2DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,6 +76,10 @@ Global
 		{80E8ACA9-A9CC-4733-99BA-CF3435523FE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80E8ACA9-A9CC-4733-99BA-CF3435523FE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80E8ACA9-A9CC-4733-99BA-CF3435523FE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{984F34E5-0E75-4AC8-855F-5FF42D5CC2DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984F34E5-0E75-4AC8-855F-5FF42D5CC2DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984F34E5-0E75-4AC8-855F-5FF42D5CC2DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984F34E5-0E75-4AC8-855F-5FF42D5CC2DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,5 +98,7 @@ Global
 		{8435C764-E0A4-440E-9355-1872E48A68D3} = {7B722198-2B4C-4624-A038-A66FEF640047}
 		{DBDB4E67-AD7C-4A16-AE99-B88913F5D3DC} = {8435C764-E0A4-440E-9355-1872E48A68D3}
 		{80E8ACA9-A9CC-4733-99BA-CF3435523FE5} = {8435C764-E0A4-440E-9355-1872E48A68D3}
+		{5791A91A-2CC0-4539-99D0-D2DB6DDE68A1} = {7B722198-2B4C-4624-A038-A66FEF640047}
+		{984F34E5-0E75-4AC8-855F-5FF42D5CC2DC} = {5791A91A-2CC0-4539-99D0-D2DB6DDE68A1}
 	EndGlobalSection
 EndGlobal

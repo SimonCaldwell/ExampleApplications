@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/proactis-documentation/ExampleApplications.svg?branch=master)](https://travis-ci.org/proactis-documentation/ExampleApplications)
+
 # PROACTIS Example Applications
 
 This is a set of example applications showing how to integrate with the PROACTIS suite of products.

@@ -9,6 +9,7 @@ namespace PROACTIS.ExampleApplications.ExampleBudgetCheckingTests
     public class BudgetCheckingTests
     {
         [TestMethod]
+        [TestCategory("API")]
         public void WhenAllLinesAreLessThan100TheCheckShouldPass()
         {
             var service = new PROACTIS.ExampleApplications.ExampleBudgetChecking.Services();
@@ -33,6 +34,7 @@ namespace PROACTIS.ExampleApplications.ExampleBudgetCheckingTests
 
 
         [TestMethod]
+        [TestCategory("API")]
         public void When2LinesExceedTheBudgetThenTheOverspendShouldBeTheOverspendFromTheTwoLinesCombined()
         {
             var service = new PROACTIS.ExampleApplications.ExampleBudgetChecking.Services();
@@ -64,6 +66,7 @@ namespace PROACTIS.ExampleApplications.ExampleBudgetCheckingTests
         }
 
         [TestMethod]
+        [TestCategory("API")]
         public void When2LinesExceedTheBudgetThenACommitmentReportIsGenerated()
         {
             var service = new PROACTIS.ExampleApplications.ExampleBudgetChecking.Services();

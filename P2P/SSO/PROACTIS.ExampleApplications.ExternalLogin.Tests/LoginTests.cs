@@ -9,6 +9,7 @@ namespace PROACTIS.ExampleApplications.ExternalLogin.Tests
     public class LoginTests
     {
         [TestMethod]
+        [TestCategory("API")]
         public void CheckAUserIsLoggedOnIfTheyProvideTheCorrectCredentials()
         {
             var service = new Services();
@@ -26,6 +27,7 @@ namespace PROACTIS.ExampleApplications.ExternalLogin.Tests
         }
 
         [TestMethod]
+        [TestCategory("API")]
         public void CheckAUserIsNotLoggedOnIfTheyProvideTheWrongCredentials()
         {
             var service = new Services();

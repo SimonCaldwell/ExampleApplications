@@ -17,6 +17,7 @@ namespace PROACTIS.ExampleApplications.NominalValidation.Tests
         /// All nominals are valid as for our sample element1 all start with an 'A'
         /// </summary>
         [TestMethod]
+        [TestCategory("API")]
         public void CheckWhenAllNominalsAreValidASuccessIsRecord()
         {
             var service = new Services();
@@ -41,6 +42,7 @@ namespace PROACTIS.ExampleApplications.NominalValidation.Tests
         /// The second nominal is not valid as element1 starts with a B not an A
         /// </summary>
         [TestMethod]
+        [TestCategory("API")]
         public void CheckWhenANominalIsInvalidAFailureIsRecord()
         {
             var service = new Services();

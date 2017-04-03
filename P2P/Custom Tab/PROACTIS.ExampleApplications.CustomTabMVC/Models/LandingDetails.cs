@@ -20,7 +20,6 @@
         /// </summary>
         public string URL { get; set; }
         public string DatabaseTitle { get; internal set; }
-        public string SessionID { get; internal set; }
         public SessionDetails SessionDetails { get; internal set; }
     }
 }

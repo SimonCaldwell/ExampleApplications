@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*
+ * This file is subject to the terms and conditions defined in file 'https://github.com/proactis-documentation/ExampleApplications/LICENSE.txt'
+ */
+using System;
 using System.Xml;
 
 namespace PROACTIS.ExampleApplications.ExampleBudgetChecking

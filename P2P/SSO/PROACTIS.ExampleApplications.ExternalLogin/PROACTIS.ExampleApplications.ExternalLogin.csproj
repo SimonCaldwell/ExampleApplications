@@ -31,8 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PROACTIS.P2P.grsCustInterfaces">
-      <HintPath>..\..\..\..\..\Program Files (x86)\PROACTIS Group Ltd\PROACTIS P2P\website\bin\PROACTIS.P2P.grsCustInterfaces.dll</HintPath>
+    <Reference Include="PROACTIS.P2P.grsCustInterfaces, Version=94.0.0.0, Culture=neutral, PublicKeyToken=5d6236efffda8f77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PROACTIS.P2P.grsCustInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

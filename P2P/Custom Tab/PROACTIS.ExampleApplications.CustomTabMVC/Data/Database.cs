@@ -17,10 +17,10 @@ namespace PROACTIS.ExampleApplications.CustomTabMVC
                 using (var dr = await cmd.ExecuteReaderAsync())
                 {
                     if (!await dr.ReadAsync())
-                        throw new Exception("No session exists. (1)");
+                        throw new Exception("No session exists - no row returned");
 
                     if (await dr.IsDBNullAsync(dr.GetOrdinal("UserGUID")))
-                        throw new Exception("No session exists. (2)");
+                        throw new Exception("No session exists - no data returned");
 
                     return new SessionDetails()
                     {

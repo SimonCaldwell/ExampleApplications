@@ -1,0 +1,5 @@
+<AddIns>
+	<Page Name="Purchasing/Orders/Plus/MultiLineEntry.asp">
+		<Link AddInURL="SampleOrderAddIn.aspx" WindowWidth="900" WindowHeight="600" WindowName="OrderTaxReset">Sample Order AddIn</Link>
+	</Page>
+</AddIns>

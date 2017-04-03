@@ -39,15 +39,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SessionID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SessionID)
-        </dd>
-
-
-        <dt>
             @Html.DisplayNameFor(model => model.SessionDetails.CompanyCode)
         </dt>
 
@@ -121,3 +112,14 @@
 
     </dl>
 </div>
+
+
+@section scripts
+{
+    <script type="text/javascript">
+        //Hide the spinner in the main window.
+        $().ready(function () {
+            parent.hideSpinner();
+        });
+    </script>
+}

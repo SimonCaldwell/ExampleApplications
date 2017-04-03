@@ -10,7 +10,6 @@ namespace PROACTIS.ExampleApplications.ExampleBudgetChecking
     {
         private const string NS = "http://www.getrealsystems.com/xml/xml-ns";
         private readonly XmlDocument dom;
-        private readonly XmlNamespaceManager nsmgr;
         private readonly XmlElement headings;
         private readonly XmlElement items;
 

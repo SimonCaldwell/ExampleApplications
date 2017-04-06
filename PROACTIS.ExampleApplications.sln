@@ -56,6 +56,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Imaging", "Imaging", "{797C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplications.ExampleImaging", "P2P\Imaging\PROACTIS.ExampleApplications.ExampleImaging\PROACTIS.ExampleApplications.ExampleImaging.csproj", "{DADDCB37-2320-4D26-90BD-C9A954825684}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplications.ExampleImagingTests", "P2P\Imaging\PROACTIS.ExampleApplications.ExampleImagingTests\PROACTIS.ExampleApplications.ExampleImagingTests.csproj", "{784C24AB-701D-4C02-BAC1-2A242EA03B5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -94,6 +96,10 @@ Global
 		{DADDCB37-2320-4D26-90BD-C9A954825684}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DADDCB37-2320-4D26-90BD-C9A954825684}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DADDCB37-2320-4D26-90BD-C9A954825684}.Release|Any CPU.Build.0 = Release|Any CPU
+		{784C24AB-701D-4C02-BAC1-2A242EA03B5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{784C24AB-701D-4C02-BAC1-2A242EA03B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{784C24AB-701D-4C02-BAC1-2A242EA03B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{784C24AB-701D-4C02-BAC1-2A242EA03B5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -117,5 +123,6 @@ Global
 		{D812C5C0-7FEA-45A4-BD4D-1CE849A626F9} = {7B722198-2B4C-4624-A038-A66FEF640047}
 		{797CC3AC-72B4-4778-B280-36F12C8DB45E} = {7B722198-2B4C-4624-A038-A66FEF640047}
 		{DADDCB37-2320-4D26-90BD-C9A954825684} = {797CC3AC-72B4-4778-B280-36F12C8DB45E}
+		{784C24AB-701D-4C02-BAC1-2A242EA03B5D} = {797CC3AC-72B4-4778-B280-36F12C8DB45E}
 	EndGlobalSection
 EndGlobal

@@ -12,6 +12,8 @@ namespace PROACTIS.ExampleApplications.ExampleImaging
     {
         bool IProcess.GetImage(string DetailsXML, ref string MIMEType, ref byte[] Image, ref string URL)
         {
+            var documentDetails = ProcessDetails.FromXML(DetailsXML);
+
             MIMEType = "text/url";
             URL = "https://sp-db01/Imaging/Invoice16732.bmp";
             return true;
@@ -19,12 +21,15 @@ namespace PROACTIS.ExampleApplications.ExampleImaging
 
         int IProcess.GetImageInfo(string DetailsXML, ref string MIMEType)
         {
+            var documentDetails = ProcessDetails.FromXML(DetailsXML);
             MIMEType = "text/url";
             return 1;
         }
 
         string IProcess.GetListOfUnprocessedImages(string DetailsXML)
         {
+            var documentDetails = ProcessDetails.FromXML(DetailsXML);
+
             return @"<?xml version='1.0'?>
 <grs:Images xmlns:grs='http://www.getrealsystems.com/xml/xml-ns'>
     <grs:Image grs:Identifier='PINV123.xml'>
@@ -38,7 +43,7 @@ namespace PROACTIS.ExampleApplications.ExampleImaging
 
         bool IProcess.HasUnprocessedImages(string DetailsXML)
         {
-            File.WriteAllText(@"c:\temp\Process_HasUnprocessedImages.xml", DetailsXML);
+            var documentDetails = ProcessDetails.FromXML(DetailsXML);
             return true;
         }
 

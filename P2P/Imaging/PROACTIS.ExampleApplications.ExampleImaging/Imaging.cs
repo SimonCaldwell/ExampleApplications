@@ -7,19 +7,36 @@ namespace PROACTIS.ExampleApplications.ExampleImaging
     {
         bool IImaging.GetImage(string DocumentDetailsXML, ref string MIMEType, ref byte[] Image, ref string URL)
         {
-            File.WriteAllText(@"c:\temp\GetImage.xml", DocumentDetailsXML);
+            var documentDetails = ImagingDetails.FromXML(DocumentDetailsXML);
+
+            // We are going to return a link to an image,  rather than the image itself.
+            MIMEType = "text/url";
+            URL = "https://server/image.bmp";
             return true;
         }
 
+        public bool GetImageOut(string DocumentDetailsXML, out string URL)
+        {
+            URL = "";
+            return true;
+        }
+
+
+
         int IImaging.GetImageInfo(string DocumentDetailsXML, ref string MIMEType)
         {
-            File.WriteAllText(@"c:\temp\GetImageInfo.xml", DocumentDetailsXML);
-            return 0;
+            var documentDetails = ImagingDetails.FromXML(DocumentDetailsXML);
+
+            // We are going to return a link to an image,  rather than the image itself.
+            MIMEType = "text/url";
+            return 1;
         }
 
         bool IImaging.HasImage(string DocumentDetailsXML)
         {
-            File.WriteAllText(@"c:\temp\HasImage.xml", DocumentDetailsXML);
+            var documentDetails = ImagingDetails.FromXML(DocumentDetailsXML);
+
+            // We pretend there is always an image
             return true;
         }
     }

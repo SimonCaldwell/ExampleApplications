@@ -46,7 +46,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Imaging.cs" />
+    <Compile Include="ImagingDetails.cs" />
     <Compile Include="Process.cs" />
+    <Compile Include="ProcessDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

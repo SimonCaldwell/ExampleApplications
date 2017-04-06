@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PROACTIS.P2P.grsImageIface;
 using System.IO;
+using System.Xml;
 
 namespace PROACTIS.ExampleApplications.ExampleImaging
 {
@@ -44,13 +45,31 @@ namespace PROACTIS.ExampleApplications.ExampleImaging
         bool IProcess.HasUnprocessedImages(string DetailsXML)
         {
             var documentDetails = ProcessDetails.FromXML(DetailsXML);
+
+            // We always show the link.
             return true;
         }
 
         bool IProcess.ProcessImage(string DetailsXML, string DocumentXML, ref string UserMessages)
         {
-            File.WriteAllText(@"c:\temp\Process_ProcessImage_DetailsXML.xml", DetailsXML);
-            File.WriteAllText(@"c:\temp\Process_ProcessImage_DocumentXML.xml", DocumentXML);
+            // Get the details of the image
+            var documentDetails = ProcessDetails.FromXML(DetailsXML);
+            var ourImage = documentDetails.DocumentGUID;
+
+            // Get the GUID of the P2P document
+            var nt = new NameTable();
+            var nsmgr = new XmlNamespaceManager(nt);
+            nsmgr.AddNamespace("grs", "http://www.getrealsystems.com/xml/xml-ns");
+            var dom = new XmlDocument(nt);
+            dom.LoadXml(DocumentXML);
+            var documentGUID = new Guid(dom.DocumentElement.SelectSingleNode("@grs:GUID",nsmgr).InnerText);
+
+            // TODO: Remove the image from the original list of images returned by the call to GetListOfUnprocessedImages
+
+            // TODO: Associate the image with the P2P document.  For example populate the ImageReference column,  or rename the
+            // image to match the document's GUID/Number etc
+
+            // Return TRUE to show that we have successfully linked the image to the document
             return true;
         }
     }

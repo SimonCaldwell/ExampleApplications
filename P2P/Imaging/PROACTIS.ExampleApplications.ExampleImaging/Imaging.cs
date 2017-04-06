@@ -14,15 +14,7 @@ namespace PROACTIS.ExampleApplications.ExampleImaging
             URL = "https://server/image.bmp";
             return true;
         }
-
-        public bool GetImageOut(string DocumentDetailsXML, out string URL)
-        {
-            URL = "";
-            return true;
-        }
-
-
-
+        
         int IImaging.GetImageInfo(string DocumentDetailsXML, ref string MIMEType)
         {
             var documentDetails = ImagingDetails.FromXML(DocumentDetailsXML);

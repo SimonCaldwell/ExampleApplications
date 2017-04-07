@@ -1,0 +1,39 @@
+﻿using System;
+using PROACTIS.P2P.grsImageIface;
+using System.IO;
+
+namespace PROACTIS.ExampleApplications.ExampleImaging
+{
+    public class Upload : P2P.grsImageIface.IUpload
+    {
+        bool IUpload.DeleteImage(string DetailsXML)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IUpload.RemoveImage(string DetailsXML)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IUpload.StoreNewImage(string DetailsXML, byte[] FileContents)
+        {
+            // Read the meta-data about the image we have been asked to upload
+            var uploadDetails = UploadDetails.FromXML(DetailsXML);
+
+            // In this example we are just going to write files to the temp folder
+            var targetFileName = Path.Combine(@"C:\Temp", uploadDetails.Reference);
+
+            // Write the file
+            File.WriteAllBytes(targetFileName, FileContents);
+
+            // True for success
+            return true;
+        }
+
+        bool IUpload.UpdateImage(string DetailsXML, byte[] FileContents)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

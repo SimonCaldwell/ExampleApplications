@@ -51,9 +51,11 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UploadTests.cs" />
     <Compile Include="SearchTests.cs" />
     <Compile Include="ImagingTests.cs" />
     <Compile Include="ProcessTests.cs" />

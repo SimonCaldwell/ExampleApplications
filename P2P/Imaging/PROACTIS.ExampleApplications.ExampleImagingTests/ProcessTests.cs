@@ -17,7 +17,6 @@ namespace PROACTIS.ExampleApplications.ExampleImagingTests
             Assert.IsTrue(actualResult);
         }
 
-
         [TestMethod]
         public void CheckWeGetAListOfImagesToProcess()
         {
@@ -35,7 +34,6 @@ namespace PROACTIS.ExampleApplications.ExampleImagingTests
 
             var numberOfImages = dom.SelectNodes("grs:Images/grs:Image", nsmgr).Count;
             Assert.AreEqual(1, numberOfImages);
-
         }
 
         [TestMethod]
@@ -65,7 +63,6 @@ namespace PROACTIS.ExampleApplications.ExampleImagingTests
             Assert.IsFalse(string.IsNullOrWhiteSpace(URL));
             Assert.IsTrue(URL.StartsWith("http"));
         }
-
 
         [TestMethod]
         public void CheckWeCanProcessADocument()

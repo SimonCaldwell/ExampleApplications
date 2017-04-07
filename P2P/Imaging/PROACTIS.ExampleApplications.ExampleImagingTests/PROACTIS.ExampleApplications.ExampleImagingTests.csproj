@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SearchTests.cs" />
     <Compile Include="ImagingTests.cs" />
     <Compile Include="ProcessTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

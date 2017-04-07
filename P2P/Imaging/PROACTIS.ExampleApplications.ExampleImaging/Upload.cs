@@ -22,7 +22,7 @@ namespace PROACTIS.ExampleApplications.ExampleImaging
             var uploadDetails = UploadDetails.FromXML(DetailsXML);
 
             // In this example we are just going to write files to the temp folder
-            var targetFileName = Path.Combine(@"C:\Temp", uploadDetails.Reference);
+            var targetFileName = Path.Combine(uploadDetails.ImageFolder, uploadDetails.Reference);
 
             // Write the file
             File.WriteAllBytes(targetFileName, FileContents);

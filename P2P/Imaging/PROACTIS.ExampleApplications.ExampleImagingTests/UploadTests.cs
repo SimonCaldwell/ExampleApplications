@@ -15,10 +15,12 @@ namespace PROACTIS.ExampleApplications.ExampleImagingTests
         public void CheckWeCanUploadAnImage()
         {
             var reference = "example.bmp";
-            var targetFileName = Path.Combine(@"c:\temp\", reference);
+            var imageFolder = @"c:\temp";
+            Directory.CreateDirectory(imageFolder);
+            var targetFileName = Path.Combine(imageFolder, reference);
 
             // Create some meta data
-            var detailsXML = GetDetailsXML(reference);
+            var detailsXML = GetDetailsXML(reference, imageFolder);
 
             // Create an image
             var bm = new Bitmap(100, 100);
@@ -53,7 +55,7 @@ namespace PROACTIS.ExampleApplications.ExampleImagingTests
         }
 
 
-        private static string GetDetailsXML(string reference)
+        private static string GetDetailsXML(string reference, string imageFolder)
         {
             return $@"<?xml version='1.0'?>
 <grs:ImagingSettings xmlns:grs='http://www.getrealsystems.com/xml/xml-ns'>
@@ -66,9 +68,7 @@ namespace PROACTIS.ExampleApplications.ExampleImagingTests
     <grs:Reference>{reference}</grs:Reference>
     <grs:FileType>BMP</grs:FileType>
 
-    <grs:InvoiceImageIdentifier>DisplayNumber</grs:InvoiceImageIdentifier>
-    <grs:DefaultImageSource>URL</grs:DefaultImageSource>
-    <grs:DefaultURL>https://sp-db01/imaging/{{ImageID}}.bmp</grs:DefaultURL>
+    <grs:ImageFolder>{imageFolder}</grs:ImageFolder>
 </grs:ImagingSettings>";
         }
     }

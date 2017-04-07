@@ -11,7 +11,10 @@ namespace PROACTIS.ExampleApplications.ExampleImaging
         public Guid CompanyGUID { get; private set; }
         public string Reference { get; private set; }
         public string FileType { get; private set; }
-
+        
+        // Custom fields
+        public string ImageFolder { get; private set; }
+        
         private UploadDetails(string detailsXML)
         {
             var nt = new NameTable();
@@ -31,6 +34,8 @@ namespace PROACTIS.ExampleApplications.ExampleImaging
             this.FileType = dom.DocumentElement.SelectSingleNode("grs:FileType", nsmgr).InnerText;
 
             // Add any custom fields here
+            this.ImageFolder = dom.DocumentElement.SelectSingleNode("grs:ImageFolder", nsmgr).InnerText;
+
         }
         internal static UploadDetails FromXML(string detailsXML)
         {

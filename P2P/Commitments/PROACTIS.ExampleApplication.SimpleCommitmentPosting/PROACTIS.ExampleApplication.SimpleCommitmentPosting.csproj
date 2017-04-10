@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PROACTIS.ExampleApplication.SimpleCommitmentPosting</RootNamespace>
-    <AssemblyName>PROACTIS.ExampleApplication.SimpleCommitmentPosting</AssemblyName>
+    <AssemblyName>PROACTIS.ExampleApplication.SimpleCommitmentProcessor</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

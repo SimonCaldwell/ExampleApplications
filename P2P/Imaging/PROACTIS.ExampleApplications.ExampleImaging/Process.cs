@@ -11,16 +11,17 @@ namespace PROACTIS.ExampleApplications.ExampleImaging
 {
     public class Process : P2P.grsImageIface.IProcess
     {
-        bool IProcess.GetImage(string DetailsXML, ref string MIMEType, ref byte[] Image, ref string URL)
+        bool IProcess.GetImage(string DetailsXML, out string MIMEType, out byte[] Image, out string URL)
         {
             var documentDetails = ProcessDetails.FromXML(DetailsXML);
 
             MIMEType = "text/url";
             URL = "https://sp-db01/Imaging/Invoice16732.bmp";
+            Image = null;
             return true;
         }
 
-        int IProcess.GetImageInfo(string DetailsXML, ref string MIMEType)
+        int IProcess.GetImageInfo(string DetailsXML, out string MIMEType)
         {
             var documentDetails = ProcessDetails.FromXML(DetailsXML);
             MIMEType = "text/url";
@@ -50,9 +51,10 @@ namespace PROACTIS.ExampleApplications.ExampleImaging
             return true;
         }
 
-        bool IProcess.ProcessImage(string DetailsXML, string DocumentXML, ref string UserMessages)
+        bool IProcess.ProcessImage(string DetailsXML, string DocumentXML, out string UserMessages)
         {
             // Get the details of the image
+            UserMessages = "";
             var documentDetails = ProcessDetails.FromXML(DetailsXML);
             var ourImage = documentDetails.DocumentGUID;
 

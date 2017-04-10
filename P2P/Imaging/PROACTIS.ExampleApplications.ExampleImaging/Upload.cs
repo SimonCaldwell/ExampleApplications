@@ -6,15 +6,6 @@ namespace PROACTIS.ExampleApplications.ExampleImaging
 {
     public class Upload : P2P.grsImageIface.IUpload
     {
-        bool IUpload.DeleteImage(string DetailsXML)
-        {
-            throw new NotImplementedException();
-        }
-
-        bool IUpload.RemoveImage(string DetailsXML)
-        {
-            throw new NotImplementedException();
-        }
 
         bool IUpload.StoreNewImage(string DetailsXML, byte[] FileContents)
         {
@@ -29,11 +20,6 @@ namespace PROACTIS.ExampleApplications.ExampleImaging
 
             // True for success
             return true;
-        }
-
-        bool IUpload.UpdateImage(string DetailsXML, byte[] FileContents)
-        {
-            throw new NotImplementedException();
         }
     }
 }

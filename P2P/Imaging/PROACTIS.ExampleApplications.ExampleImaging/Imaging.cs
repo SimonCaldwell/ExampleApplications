@@ -5,17 +5,18 @@ namespace PROACTIS.ExampleApplications.ExampleImaging
 {
     public class Imaging : P2P.grsImageIface.IImaging
     {
-        bool IImaging.GetImage(string DocumentDetailsXML, ref string MIMEType, ref byte[] Image, ref string URL)
+        bool IImaging.GetImage(string DocumentDetailsXML, out string MIMEType, out byte[] Image, out string URL)
         {
             var documentDetails = ImagingDetails.FromXML(DocumentDetailsXML);
 
             // We are going to return a link to an image,  rather than the image itself.
             MIMEType = "text/url";
             URL = "https://server/image.bmp";
+            Image = null;
             return true;
         }
         
-        int IImaging.GetImageInfo(string DocumentDetailsXML, ref string MIMEType)
+        int IImaging.GetImageInfo(string DocumentDetailsXML, out string MIMEType)
         {
             var documentDetails = ImagingDetails.FromXML(DocumentDetailsXML);
 

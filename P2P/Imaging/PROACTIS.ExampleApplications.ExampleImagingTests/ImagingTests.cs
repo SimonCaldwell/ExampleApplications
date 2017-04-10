@@ -23,8 +23,7 @@ namespace PROACTIS.ExampleApplications.ExampleImagingTests
             var service = new PROACTIS.ExampleApplications.ExampleImaging.Imaging() as IImaging;
             var documentDetailsXML = GetDocumentDetailsXML();
 
-            var MIMEType = "";
-            var actualResult = service.GetImageInfo(documentDetailsXML, ref MIMEType);
+            var actualResult = service.GetImageInfo(documentDetailsXML, out var MIMEType);
             Assert.AreEqual(1, actualResult);
             Assert.AreEqual("text/url", MIMEType);
         }
@@ -35,10 +34,7 @@ namespace PROACTIS.ExampleApplications.ExampleImagingTests
             var service = new PROACTIS.ExampleApplications.ExampleImaging.Imaging() as IImaging;
             var documentDetailsXML = GetDocumentDetailsXML();
 
-            var MIMEType = "";
-            var URL = "";
-            var image = default(byte[]);
-            var actualResult = service.GetImage(documentDetailsXML, ref MIMEType, ref image, ref URL);
+            var actualResult = service.GetImage(documentDetailsXML, out var MIMEType, out var image, out var URL);
             Assert.IsTrue(actualResult);
             Assert.AreEqual("text/url", MIMEType);
             Assert.IsFalse(string.IsNullOrWhiteSpace(URL));

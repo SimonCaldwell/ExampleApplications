@@ -58,6 +58,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplication
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplications.ExampleImagingTests", "P2P\Imaging\PROACTIS.ExampleApplications.ExampleImagingTests\PROACTIS.ExampleApplications.ExampleImagingTests.csproj", "{784C24AB-701D-4C02-BAC1-2A242EA03B5D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commitments", "Commitments", "{9BD8F295-9B5C-4253-9A3D-452181931B83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplication.SimpleCommitmentPosting", "P2P\Commitments\PROACTIS.ExampleApplication.SimpleCommitmentPosting\PROACTIS.ExampleApplication.SimpleCommitmentPosting.csproj", "{4759C206-C1E1-402C-BE8E-CD32CB0634C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplication.TransactionalCommitments", "P2P\Commitments\PROACTIS.ExampleApplication.TransactionalCommitments\PROACTIS.ExampleApplication.TransactionalCommitments.csproj", "{7CAA5102-E822-4FAE-8A68-49BDAEB63E59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -100,6 +106,14 @@ Global
 		{784C24AB-701D-4C02-BAC1-2A242EA03B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{784C24AB-701D-4C02-BAC1-2A242EA03B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{784C24AB-701D-4C02-BAC1-2A242EA03B5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4759C206-C1E1-402C-BE8E-CD32CB0634C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4759C206-C1E1-402C-BE8E-CD32CB0634C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4759C206-C1E1-402C-BE8E-CD32CB0634C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4759C206-C1E1-402C-BE8E-CD32CB0634C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CAA5102-E822-4FAE-8A68-49BDAEB63E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CAA5102-E822-4FAE-8A68-49BDAEB63E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CAA5102-E822-4FAE-8A68-49BDAEB63E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CAA5102-E822-4FAE-8A68-49BDAEB63E59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -124,5 +138,8 @@ Global
 		{797CC3AC-72B4-4778-B280-36F12C8DB45E} = {7B722198-2B4C-4624-A038-A66FEF640047}
 		{DADDCB37-2320-4D26-90BD-C9A954825684} = {797CC3AC-72B4-4778-B280-36F12C8DB45E}
 		{784C24AB-701D-4C02-BAC1-2A242EA03B5D} = {797CC3AC-72B4-4778-B280-36F12C8DB45E}
+		{9BD8F295-9B5C-4253-9A3D-452181931B83} = {7B722198-2B4C-4624-A038-A66FEF640047}
+		{4759C206-C1E1-402C-BE8E-CD32CB0634C2} = {9BD8F295-9B5C-4253-9A3D-452181931B83}
+		{7CAA5102-E822-4FAE-8A68-49BDAEB63E59} = {9BD8F295-9B5C-4253-9A3D-452181931B83}
 	EndGlobalSection
 EndGlobal

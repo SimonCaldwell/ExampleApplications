@@ -68,6 +68,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exports", "Exports", "{1464
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplication.SimpleExportProcessor", "P2P\Exports\PROACTIS.ExampleApplication.SimpleExportProcessor\PROACTIS.ExampleApplication.SimpleExportProcessor.csproj", "{DC7F5E14-36ED-428B-8E46-A51CEA3B5952}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplication.BatchExportProcessor", "P2P\Exports\PROACTIS.ExampleApplication.BatchExportProcessor\PROACTIS.ExampleApplication.BatchExportProcessor.csproj", "{EC3A2412-7300-4907-9F0C-7D722EFE229B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -122,6 +124,10 @@ Global
 		{DC7F5E14-36ED-428B-8E46-A51CEA3B5952}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC7F5E14-36ED-428B-8E46-A51CEA3B5952}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC7F5E14-36ED-428B-8E46-A51CEA3B5952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC3A2412-7300-4907-9F0C-7D722EFE229B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3A2412-7300-4907-9F0C-7D722EFE229B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3A2412-7300-4907-9F0C-7D722EFE229B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3A2412-7300-4907-9F0C-7D722EFE229B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -151,5 +157,6 @@ Global
 		{7CAA5102-E822-4FAE-8A68-49BDAEB63E59} = {9BD8F295-9B5C-4253-9A3D-452181931B83}
 		{146459F6-16F8-47CF-A3CB-69668F3878F7} = {7B722198-2B4C-4624-A038-A66FEF640047}
 		{DC7F5E14-36ED-428B-8E46-A51CEA3B5952} = {146459F6-16F8-47CF-A3CB-69668F3878F7}
+		{EC3A2412-7300-4907-9F0C-7D722EFE229B} = {146459F6-16F8-47CF-A3CB-69668F3878F7}
 	EndGlobalSection
 EndGlobal

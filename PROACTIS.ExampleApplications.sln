@@ -64,6 +64,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplication
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplication.TransactionalCommitments", "P2P\Commitments\PROACTIS.ExampleApplication.TransactionalCommitments\PROACTIS.ExampleApplication.TransactionalCommitments.csproj", "{7CAA5102-E822-4FAE-8A68-49BDAEB63E59}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exports", "Exports", "{146459F6-16F8-47CF-A3CB-69668F3878F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplication.SimpleExportProcessor", "P2P\Exports\PROACTIS.ExampleApplication.SimpleExportProcessor\PROACTIS.ExampleApplication.SimpleExportProcessor.csproj", "{DC7F5E14-36ED-428B-8E46-A51CEA3B5952}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -114,6 +118,10 @@ Global
 		{7CAA5102-E822-4FAE-8A68-49BDAEB63E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CAA5102-E822-4FAE-8A68-49BDAEB63E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CAA5102-E822-4FAE-8A68-49BDAEB63E59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC7F5E14-36ED-428B-8E46-A51CEA3B5952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC7F5E14-36ED-428B-8E46-A51CEA3B5952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC7F5E14-36ED-428B-8E46-A51CEA3B5952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC7F5E14-36ED-428B-8E46-A51CEA3B5952}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -141,5 +149,7 @@ Global
 		{9BD8F295-9B5C-4253-9A3D-452181931B83} = {7B722198-2B4C-4624-A038-A66FEF640047}
 		{4759C206-C1E1-402C-BE8E-CD32CB0634C2} = {9BD8F295-9B5C-4253-9A3D-452181931B83}
 		{7CAA5102-E822-4FAE-8A68-49BDAEB63E59} = {9BD8F295-9B5C-4253-9A3D-452181931B83}
+		{146459F6-16F8-47CF-A3CB-69668F3878F7} = {7B722198-2B4C-4624-A038-A66FEF640047}
+		{DC7F5E14-36ED-428B-8E46-A51CEA3B5952} = {146459F6-16F8-47CF-A3CB-69668F3878F7}
 	EndGlobalSection
 EndGlobal

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplications.ExternalLogin", "P2P\SSO\PROACTIS.ExampleApplications.ExternalLogin\PROACTIS.ExampleApplications.ExternalLogin.csproj", "{331981D6-8534-4A16-A959-B7E2617D400F}"
 EndProject
@@ -70,6 +70,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplication
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplication.BatchExportProcessor", "P2P\Exports\PROACTIS.ExampleApplication.BatchExportProcessor\PROACTIS.ExampleApplication.BatchExportProcessor.csproj", "{EC3A2412-7300-4907-9F0C-7D722EFE229B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{ED70953D-701D-4875-B623-A81DE89BC82E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROACTIS.ExampleApplication.CancelOrder", "P2P\Gateways\PROACTIS.ExampleApplication.CancelOrder\PROACTIS.ExampleApplication.CancelOrder.csproj", "{174F94D2-65A8-4A76-98A4-09D457D47E94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -128,6 +132,10 @@ Global
 		{EC3A2412-7300-4907-9F0C-7D722EFE229B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC3A2412-7300-4907-9F0C-7D722EFE229B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC3A2412-7300-4907-9F0C-7D722EFE229B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{174F94D2-65A8-4A76-98A4-09D457D47E94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{174F94D2-65A8-4A76-98A4-09D457D47E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{174F94D2-65A8-4A76-98A4-09D457D47E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{174F94D2-65A8-4A76-98A4-09D457D47E94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -158,5 +166,7 @@ Global
 		{146459F6-16F8-47CF-A3CB-69668F3878F7} = {7B722198-2B4C-4624-A038-A66FEF640047}
 		{DC7F5E14-36ED-428B-8E46-A51CEA3B5952} = {146459F6-16F8-47CF-A3CB-69668F3878F7}
 		{EC3A2412-7300-4907-9F0C-7D722EFE229B} = {146459F6-16F8-47CF-A3CB-69668F3878F7}
+		{ED70953D-701D-4875-B623-A81DE89BC82E} = {7B722198-2B4C-4624-A038-A66FEF640047}
+		{174F94D2-65A8-4A76-98A4-09D457D47E94} = {ED70953D-701D-4875-B623-A81DE89BC82E}
 	EndGlobalSection
 EndGlobal

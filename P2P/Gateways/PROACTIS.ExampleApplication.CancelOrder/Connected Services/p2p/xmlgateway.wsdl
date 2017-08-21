@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.proactis.com/proactis/webservice" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.proactis.com/proactis/webservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.proactis.com/proactis/webservice">
+      <s:element name="GetSecurityConfig">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSecurityConfigResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSecurityConfigResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOffLineExpenseConfig">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOffLineExpenseConfigResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOffLineExpenseConfigResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImportDocumentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExportDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExportDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExportDocumentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListDatabases">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListDatabasesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListDatabasesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticateUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AuthenticateUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrderAcknowledgment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AcknowledgmentXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrderAcknowledgmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderAcknowledgmentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExportDefinition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExportDefinitionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetExportDefinitionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunExport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunExportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RunExportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ControlXML" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TemplateLabel" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OrderNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DisplayNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CancellationReason" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelOrderResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CancelOrderByGUID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ControlXML" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderGUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CancellationReason" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelOrderByGUIDResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CloseOrderForInvoicing">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ControlXML" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderGUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CloseOrderForInvoicingResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AuthoriseOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ControlXML" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderGUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthoriseOrderResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="OrdersForAuthorisation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ControlXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrdersForAuthorisationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrdersForAuthorisationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSecurityConfigSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSecurityConfig" />
+  </wsdl:message>
+  <wsdl:message name="GetSecurityConfigSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSecurityConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOffLineExpenseConfigSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOffLineExpenseConfig" />
+  </wsdl:message>
+  <wsdl:message name="GetOffLineExpenseConfigSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOffLineExpenseConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ImportDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:ImportDocument" />
+  </wsdl:message>
+  <wsdl:message name="ImportDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:ImportDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExportDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:ExportDocument" />
+  </wsdl:message>
+  <wsdl:message name="ExportDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:ExportDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListDatabasesSoapIn">
+    <wsdl:part name="parameters" element="tns:ListDatabases" />
+  </wsdl:message>
+  <wsdl:message name="ListDatabasesSoapOut">
+    <wsdl:part name="parameters" element="tns:ListDatabasesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthenticateUser" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="OrderAcknowledgmentSoapIn">
+    <wsdl:part name="parameters" element="tns:OrderAcknowledgment" />
+  </wsdl:message>
+  <wsdl:message name="OrderAcknowledgmentSoapOut">
+    <wsdl:part name="parameters" element="tns:OrderAcknowledgmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetExportDefinitionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetExportDefinition" />
+  </wsdl:message>
+  <wsdl:message name="GetExportDefinitionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetExportDefinitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunExportSoapIn">
+    <wsdl:part name="parameters" element="tns:RunExport" />
+  </wsdl:message>
+  <wsdl:message name="RunExportSoapOut">
+    <wsdl:part name="parameters" element="tns:RunExportResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelOrder" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderByGUIDSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelOrderByGUID" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderByGUIDSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelOrderByGUIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CloseOrderForInvoicingSoapIn">
+    <wsdl:part name="parameters" element="tns:CloseOrderForInvoicing" />
+  </wsdl:message>
+  <wsdl:message name="CloseOrderForInvoicingSoapOut">
+    <wsdl:part name="parameters" element="tns:CloseOrderForInvoicingResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthoriseOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthoriseOrder" />
+  </wsdl:message>
+  <wsdl:message name="AuthoriseOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthoriseOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="OrdersForAuthorisationSoapIn">
+    <wsdl:part name="parameters" element="tns:OrdersForAuthorisation" />
+  </wsdl:message>
+  <wsdl:message name="OrdersForAuthorisationSoapOut">
+    <wsdl:part name="parameters" element="tns:OrdersForAuthorisationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="XMLGatewaySoap">
+    <wsdl:operation name="GetSecurityConfig">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get security configuration information.</wsdl:documentation>
+      <wsdl:input message="tns:GetSecurityConfigSoapIn" />
+      <wsdl:output message="tns:GetSecurityConfigSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOffLineExpenseConfig">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get configuration information for PROACTIS offline expenses.</wsdl:documentation>
+      <wsdl:input message="tns:GetOffLineExpenseConfigSoapIn" />
+      <wsdl:output message="tns:GetOffLineExpenseConfigSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportDocument">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Import the supplied xml document into PROACTIS</wsdl:documentation>
+      <wsdl:input message="tns:ImportDocumentSoapIn" />
+      <wsdl:output message="tns:ImportDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportDocument">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Export the supplied xml document from PROACTIS</wsdl:documentation>
+      <wsdl:input message="tns:ExportDocumentSoapIn" />
+      <wsdl:output message="tns:ExportDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListDatabases">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the list of available PROACTIS databases</wsdl:documentation>
+      <wsdl:input message="tns:ListDatabasesSoapIn" />
+      <wsdl:output message="tns:ListDatabasesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Checks a users LoginID and Password are valid on a given PROACTIS database.  Returns simply TRUE or FALSE</wsdl:documentation>
+      <wsdl:input message="tns:AuthenticateUserSoapIn" />
+      <wsdl:output message="tns:AuthenticateUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderAcknowledgment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Suppliers can call this method to confirm that they have received the purchase order.</wsdl:documentation>
+      <wsdl:input message="tns:OrderAcknowledgmentSoapIn" />
+      <wsdl:output message="tns:OrderAcknowledgmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExportDefinition">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns XML describing the tables which are available for exporting.</wsdl:documentation>
+      <wsdl:input message="tns:GetExportDefinitionSoapIn" />
+      <wsdl:output message="tns:GetExportDefinitionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunExport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the contents of the exported table as XML.</wsdl:documentation>
+      <wsdl:input message="tns:RunExportSoapIn" />
+      <wsdl:output message="tns:RunExportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cancels the specified purchase order.</wsdl:documentation>
+      <wsdl:input message="tns:CancelOrderSoapIn" />
+      <wsdl:output message="tns:CancelOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrderByGUID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cancels the specified purchase order identified by its GUID</wsdl:documentation>
+      <wsdl:input message="tns:CancelOrderByGUIDSoapIn" />
+      <wsdl:output message="tns:CancelOrderByGUIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseOrderForInvoicing">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Closes the specifed purchase order for invoicing</wsdl:documentation>
+      <wsdl:input message="tns:CloseOrderForInvoicingSoapIn" />
+      <wsdl:output message="tns:CloseOrderForInvoicingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthoriseOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorises the specifed purchase order</wsdl:documentation>
+      <wsdl:input message="tns:AuthoriseOrderSoapIn" />
+      <wsdl:output message="tns:AuthoriseOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OrdersForAuthorisation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lists the orders waiting to be authorised for a given user</wsdl:documentation>
+      <wsdl:input message="tns:OrdersForAuthorisationSoapIn" />
+      <wsdl:output message="tns:OrdersForAuthorisationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="XMLGatewaySoap" type="tns:XMLGatewaySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSecurityConfig">
+      <soap:operation soapAction="http://www.proactis.com/proactis/webservice/GetSecurityConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOffLineExpenseConfig">
+      <soap:operation soapAction="http://www.proactis.com/proactis/webservice/GetOffLineExpenseConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportDocument">
+      <soap:operation soapAction="http://www.proactis.com/proactis/webservice/ImportDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExportDocument">
+      <soap:operation soapAction="http://www.proactis.com/proactis/webservice/ExportDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListDatabases">
+      <soap:operation soapAction="http://www.proactis.com/proactis/webservice/ListDatabases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <soap:operation soapAction="http://www.proactis.com/proactis/webservice/AuthenticateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderAcknowledgment">
+      <soap:operation soapAction="http://www.proactis.com/proactis/webservice/OrderAcknowledgment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExportDefinition">
+      <soap:operation soapAction="http://www.proactis.com/proactis/webservice/GetExportDefinition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunExport">
+      <soap:operation soapAction="http://www.proactis.com/proactis/webservice/RunExport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <soap:operation soapAction="http://www.proactis.com/proactis/webservice/CancelOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrderByGUID">
+      <soap:operation soapAction="http://www.proactis.com/proactis/webservice/CancelOrderByGUID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseOrderForInvoicing">
+      <soap:operation soapAction="http://www.proactis.com/proactis/webservice/CloseOrderForInvoicing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthoriseOrder">
+      <soap:operation soapAction="http://www.proactis.com/proactis/webservice/AuthoriseOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrdersForAuthorisation">
+      <soap:operation soapAction="http://www.proactis.com/proactis/webservice/OrdersForAuthorisation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="XMLGatewaySoap12" type="tns:XMLGatewaySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSecurityConfig">
+      <soap12:operation soapAction="http://www.proactis.com/proactis/webservice/GetSecurityConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOffLineExpenseConfig">
+      <soap12:operation soapAction="http://www.proactis.com/proactis/webservice/GetOffLineExpenseConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportDocument">
+      <soap12:operation soapAction="http://www.proactis.com/proactis/webservice/ImportDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExportDocument">
+      <soap12:operation soapAction="http://www.proactis.com/proactis/webservice/ExportDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListDatabases">
+      <soap12:operation soapAction="http://www.proactis.com/proactis/webservice/ListDatabases" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <soap12:operation soapAction="http://www.proactis.com/proactis/webservice/AuthenticateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderAcknowledgment">
+      <soap12:operation soapAction="http://www.proactis.com/proactis/webservice/OrderAcknowledgment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExportDefinition">
+      <soap12:operation soapAction="http://www.proactis.com/proactis/webservice/GetExportDefinition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunExport">
+      <soap12:operation soapAction="http://www.proactis.com/proactis/webservice/RunExport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <soap12:operation soapAction="http://www.proactis.com/proactis/webservice/CancelOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrderByGUID">
+      <soap12:operation soapAction="http://www.proactis.com/proactis/webservice/CancelOrderByGUID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseOrderForInvoicing">
+      <soap12:operation soapAction="http://www.proactis.com/proactis/webservice/CloseOrderForInvoicing" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthoriseOrder">
+      <soap12:operation soapAction="http://www.proactis.com/proactis/webservice/AuthoriseOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrdersForAuthorisation">
+      <soap12:operation soapAction="http://www.proactis.com/proactis/webservice/OrdersForAuthorisation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="XMLGateway">
+    <wsdl:port name="XMLGatewaySoap" binding="tns:XMLGatewaySoap">
+      <soap:address location="https://p2p-cux.proactislabs.com/xmlgateway.asmx" />
+    </wsdl:port>
+    <wsdl:port name="XMLGatewaySoap12" binding="tns:XMLGatewaySoap12">
+      <soap12:address location="https://p2p-cux.proactislabs.com/xmlgateway.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
